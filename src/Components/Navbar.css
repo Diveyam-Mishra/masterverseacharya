@@ -1,0 +1,23 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+#log
+{
+    background-color: black;
+    border-radius: 999px;
+    color: white;
+    border-color: white;
+    font-weight: bolder;
+    margin-right: 8px;
+}
+#up
+{
+    color: black;
+    
+}
+#log:hover {
+  background-color: #222;
+  box-shadow: 0 0 20px rgba(162, 4, 230, 0.3);
+
+
+}
