@@ -1,19 +1,25 @@
+.navbar {
+  background-color: transparent;
+  background-image: url("..//..//public/purple-bg.png");
+}
 body {
   font-family: 'Inter', sans-serif;
+  background-image: url("..//..//public/purple-bg.png");
+  background-size: cover;
+}
+a{
+    text-decoration: none;
+    color: white;
 }
 #log
 {
     background-color: black;
     border-radius: 999px;
     color: white;
-    border-color: white;
+    border-color: black;
     font-weight: bolder;
-    margin-right: 8px;
-}
-#up
-{
-    color: black;
-    
+    margin-right: 12px;
+    padding-inline: 20px;
 }
 #log:hover {
   background-color: #222;

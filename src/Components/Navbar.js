@@ -11,6 +11,7 @@ export default function Navbar(props) {
       <a href="" id="up">Sign Up For Free</a>
       </div>
   </div>
+  
 </nav></div>
   )
 }
