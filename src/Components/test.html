@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Acharya API</title>
+</head>
+<body>
+  <h2>Ask Acharya</h2>
+  <input type="text" id="question" placeholder="Type your question here" />
+  <button onclick="ask()">Send</button>
+  <pre id="result"></pre>
+
+  <script>
+    async function ask() {
+      const question = document.getElementById("question").value;
+      const body = {
+        app_name: "masterversacharya",
+        user_id: "user123",
+        session_id: "temp-session",
+        new_message: {
+          role: "user",
+          parts: [{ text: question }]
+        },
+        streaming: false
+      };
+
+      const response = await fetch("http://127.0.0.1:8000/run_sse", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body)
+      });
+
+      const data = await response.json();
+      document.getElementById("result").innerText = data.response || "No response.";
+    }
+  </script>
+</body>
+</html>
